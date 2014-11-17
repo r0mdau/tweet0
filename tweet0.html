@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+    <title>DirectStream tweet0</title>
+    <link rel="stylesheet" href="http://getbootstrap.com/dist/css/bootstrap.min.css">
+    <style rel="stylesheet">
+        #tweets { list-style-type: none; margin: 0; padding: 0; }
+        #tweets li { padding: 5px 10px; }
+        #tweets li:nth-child(even) { background: #eee; }
+        img {border-radius: 10px}
+    </style>
+</head>
+<body>
+<div id="tweets">
+</div>
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://webservice.ovh:19803/socket.io/socket.io.js"></script>
+<script>
+    'use strict';
+    var socket;
+    $(document).ready(function () {
+        socket = io('http://webservice.ovh:19803');
+        socket.on('tweet', function (tweet) {
+            $('#tweets').prepend(
+                '<li>' +
+                '<img width="50px" src="' + tweet.user.profile_image_url + '" />&nbsp;' +
+                '<a target="_blank" href="https://twitter.com/'+ tweet.user.screen_name +'">' + tweet.user.screen_name + '</a>' +
+                ' : ' + tweet.text +
+                '</li>'
+            );
+        });
+    });
+</script>
+</body>
+</html>
