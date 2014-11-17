@@ -1,0 +1,30 @@
+{
+  "name": "tweet0",
+  "version": "0.0.1",
+  "description": "Get real time tweets with input string",
+  "main": "tweet.js",
+  "dependencies": {
+    "node-tweet-stream": "^1.6.0",
+    "socket.io": "^1.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node tweet.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/r0mdau/tweet0"
+  },
+  "keywords": [
+    "tweeter",
+    "tweet",
+    "socket.io",
+    "realtime"
+  ],
+  "author": "Romain Dauby",
+  "license": "Apache2",
+  "bugs": {
+    "url": "https://github.com/r0mdau/tweet0/issues"
+  },
+  "homepage": "https://github.com/r0mdau/tweet0"
+}
