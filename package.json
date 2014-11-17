@@ -2,7 +2,7 @@
   "name": "tweet0",
   "version": "0.0.1",
   "description": "Get real time tweets with input string",
-  "main": "tweet.js",
+  "main": "server.js",
   "dependencies": {
     "node-tweet-stream": "^1.6.0",
     "socket.io": "^1.2.0"
