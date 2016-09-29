@@ -4,8 +4,9 @@
   "description": "Get real time tweets with input string",
   "main": "server.js",
   "dependencies": {
-    "node-tweet-stream": "^1.6.0",
-    "socket.io": "^1.2.0"
+    "socket.io": "^1.3.7",
+    "twitter": "^1.2.5",
+    "user-stream": "~0.0.7"
   },
   "devDependencies": {},
   "scripts": {
